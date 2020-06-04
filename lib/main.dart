@@ -1,4 +1,4 @@
-import 'package:covid_19_bd/screens/splash_screen.dart';
+import './screens/splash_screen.dart';
 import 'package:flutter/foundation.dart';
 
 import './constant.dart';

@@ -18,8 +18,8 @@ class SplashScreen extends StatelessWidget {
             color: Colors.indigo,
             child: TextLiquidFill(
                 text: 'করোনা ট্র্যাকার বিডি',
-                waveColor: Color(0xffADFF00),
-                loadDuration: Duration(seconds: 4),
+                waveColor: Colors.white,
+                loadDuration: Duration(seconds: 3),
                 boxBackgroundColor: Colors.indigoAccent,
                 textStyle: kBanglaTextStyle.copyWith(
                     fontSize: 40, color: Colors.amber)),
@@ -28,7 +28,7 @@ class SplashScreen extends StatelessWidget {
             child: AnimatedDrawing.svg(
               "assets/icons/covid-bd-logo.svg",
               run: true,
-              duration: Duration(seconds: 3),
+              duration: Duration(seconds: 4),
               onFinish: () =>
                   Navigator.pushReplacementNamed(context, MainScreen.routeName),
             ),

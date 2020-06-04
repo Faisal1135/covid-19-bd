@@ -7,10 +7,7 @@ import 'package:http/http.dart' as http;
 
 class CovidSummaryModel {
   String totalconf;
-  // String totalquarentine;
-  // String relesefromQuarentine;
   String totalDeath;
-  // String todaylabtest;
   String todayconf;
   String todayDeath;
   String recoverd;
@@ -20,10 +17,7 @@ class CovidSummaryModel {
 
   CovidSummaryModel({
     this.totalconf,
-    // this.totalquarentine,
-    // this.relesefromQuarentine,
     this.totalDeath,
-    // this.todaylabtest,
     this.todayconf,
     this.todayDeath,
     this.recoverd,
@@ -35,11 +29,8 @@ class CovidSummaryModel {
   Map<String, String> toMap() {
     return {
       "Total Confirmed": totalconf,
-      // "Total Quarantine": totalquarentine,
       "Total Death": totalDeath,
-      // "Released from quarantine": relesefromQuarentine,
       "New Affected": todayconf,
-      // "New Tests": todaylabtest,
       "New Death": todayDeath,
       "Recoverd": recoverd,
       "critical": critical,
@@ -61,7 +52,6 @@ class WorldData {
       "Total Affected": totalConf,
       "Total Country": totalCountry,
       "Total Death": totalDeath,
-      // "Source": ref,
     };
   }
 }
@@ -96,7 +86,6 @@ class FetchBriefData extends ChangeNotifier {
           .toList();
 
       var banglaData = await fetchData();
-      print(banglaData);
 
       var newMap = CovidSummaryModel(
           totalconf: banglaData.totalCases != null
@@ -118,8 +107,6 @@ class FetchBriefData extends ChangeNotifier {
           activeCase: banglaData.activeCases.toString(),
           rationMillion: banglaData.rationPerMillion);
 
-      print(newMap.toMap());
-
       var newWorld = WorldData(
           totalConf: prothomWorlddatalist[4],
           totalCountry: prothomWorlddatalist[5],
@@ -132,24 +119,3 @@ class FetchBriefData extends ChangeNotifier {
     }
   }
 }
-
-// var newMap = CovidSummaryModel(
-//     totalconf: prothomWorlddatalist[0],
-//     totalquarentine: bddashdatalist[1],
-//     relesefromQuarentine: bddashdatalist[2],
-//     totalDeath: prothomWorlddatalist[2],
-//     todaylabtest: bddashdatalist[4],
-//     todayconf: bddashdatalist[5],
-//     todayDeath: bddashdatalist[6],
-//     recoverd: prothomWorlddatalist[1]);
-
-// var newMap = CovidSummaryModel(
-//           totalconf: itemnum[0],
-//           totalquarentine: itemnum[1],
-//           relesefromQuarentine: itemnum[2],
-//           totalDeath: itemnum[3],
-//           todaylabtest: itemnum[4],
-//           todayconf: itemnum[5],
-//           todayDeath: itemnum[6]);
-//       datamap = newMap;
-//       notifyListeners();

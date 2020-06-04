@@ -198,7 +198,7 @@ class _DashBorardScreenState extends State<DashBorardScreen> {
                               children: <Widget>[
                                 SymptomCard(
                                   image: "assets/images/headache.png",
-                                  title: "জ্বর",
+                                  title: "মাথাব্যথা",
                                   isActive: true,
                                 ),
                                 SymptomCard(
@@ -207,13 +207,13 @@ class _DashBorardScreenState extends State<DashBorardScreen> {
                                 ),
                                 SymptomCard(
                                   image: "assets/images/fever.png",
-                                  title: "মাথাব্যথা",
+                                  title: "জ্বর ",
                                 ),
                               ],
                             ),
                           ),
                           SizedBox(height: 20),
-                          Text("করোনা প্রতিরোধ", style: kTitleTextstyle),
+                          Text("করোনা প্রতিরোধ", style: kBanglaTextStyle),
                           SizedBox(height: 20),
                           PreventCard(
                             text:

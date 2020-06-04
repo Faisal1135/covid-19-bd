@@ -1,0 +1,9 @@
+It helps you track the current condition of Covid-19 in Bangladesh.
+
+
+
+Feature:
+1. Track lastest Covid 19 releted update in Bangladesh.
+2. List most affected and risky place in Dhaka .
+3. Enlight with lastest news posted by eminent News Media.
+4. Strong Search within Global and Bangladesh`s data.
